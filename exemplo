@@ -1,0 +1,24 @@
+    $nome =  $_POST['nome'];
+    $bilhete =  $_POST['bilhete'];
+    $filho =  $_POST['filho'];
+    $de =  $_POST['de'];
+    $idade =  $_POST['idade'];
+    $data =  $_POST['data'];
+    $estado =  $_POST['estado'];
+    $residencia =  $_POST['residencia'];
+    $telefone =  $_POST['telefone'];
+    $matricula =  $_POST['ma'];
+    $curso =  $_POST['curso'];
+    $turno =  $_POST['turno'];
+    $turma =  $_POST['turma'];
+    $ano =  $_POST['ano'];
+
+    $sql = "INSERT INTO solicitar(nome, bilhete, filho, de, idade, datas, estado, morada, fone, matricula, curso, turno, turma, ano) 
+            VALUES ('$nome', '$bilhete', '$filho, '$de', $idade, '$data', '$estado', '$residencia', $telefone, $matricula, '$curso', '$turno', '$turma', $ano)";
+
+    if(mysqli_query($conexao, $sql)){
+       echo "bem vindo";
+    }
+    else{
+        echo "homem mau".mysqli_connect_error($conexao);
+    }
